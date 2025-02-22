@@ -59,3 +59,9 @@ window.addEventListener('scroll', () => {
         'rgba(51, 51, 51, 0.95)' : 
         'rgba(51, 51, 51, 0.95)'; // Adjust as needed
 });
+// Add to script.js
+document.querySelectorAll('img').forEach(img => {
+    img.onerror = function() {
+        console.error('Error loading image:', img.src);
+    };
+});
